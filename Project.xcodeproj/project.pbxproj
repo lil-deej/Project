@@ -15,6 +15,13 @@
 		4270B4CE235660050043B650 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4CD235660050043B650 /* ProjectTests.swift */; };
 		4270B4D9235660050043B650 /* ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4D8235660050043B650 /* ProjectUITests.swift */; };
 		4270B4E72356607C0043B650 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4E62356607C0043B650 /* MainViewController.swift */; };
+		4270B4E92356667C0043B650 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4E82356667C0043B650 /* NavigationView.swift */; };
+		4270B4EB235667160043B650 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4EA235667160043B650 /* ScrollViewController.swift */; };
+		4270B4ED235669040043B650 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4EC235669040043B650 /* TimerViewController.swift */; };
+		4270B4EF2356746E0043B650 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4EE2356746E0043B650 /* StatsViewController.swift */; };
+		4270B4F1235674760043B650 /* CandlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4F0235674760043B650 /* CandlesViewController.swift */; };
+		4270B4F3235674810043B650 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4F2235674810043B650 /* ResourcesViewController.swift */; };
+		4270B4F523568DED0043B650 /* NavigationViewAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4F423568DED0043B650 /* NavigationViewAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		4270B4D8235660050043B650 /* ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUITests.swift; sourceTree = "<group>"; };
 		4270B4DA235660050043B650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4270B4E62356607C0043B650 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4270B4E82356667C0043B650 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		4270B4EA235667160043B650 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		4270B4EC235669040043B650 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		4270B4EE2356746E0043B650 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		4270B4F0235674760043B650 /* CandlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlesViewController.swift; sourceTree = "<group>"; };
+		4270B4F2235674810043B650 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		4270B4F423568DED0043B650 /* NavigationViewAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +116,17 @@
 				4270B4B6235660040043B650 /* AppDelegate.swift */,
 				4270B4B8235660040043B650 /* SceneDelegate.swift */,
 				4270B4E62356607C0043B650 /* MainViewController.swift */,
+				4270B4EA235667160043B650 /* ScrollViewController.swift */,
+				4270B4EC235669040043B650 /* TimerViewController.swift */,
+				4270B4E82356667C0043B650 /* NavigationView.swift */,
+				4270B4F423568DED0043B650 /* NavigationViewAnimations.swift */,
 				4270B4BC235660040043B650 /* Main.storyboard */,
 				4270B4BF235660050043B650 /* Assets.xcassets */,
 				4270B4C1235660050043B650 /* LaunchScreen.storyboard */,
 				4270B4C4235660050043B650 /* Info.plist */,
+				4270B4EE2356746E0043B650 /* StatsViewController.swift */,
+				4270B4F0235674760043B650 /* CandlesViewController.swift */,
+				4270B4F2235674810043B650 /* ResourcesViewController.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -261,7 +282,14 @@
 			files = (
 				4270B4E72356607C0043B650 /* MainViewController.swift in Sources */,
 				4270B4B7235660040043B650 /* AppDelegate.swift in Sources */,
+				4270B4EB235667160043B650 /* ScrollViewController.swift in Sources */,
+				4270B4E92356667C0043B650 /* NavigationView.swift in Sources */,
+				4270B4EF2356746E0043B650 /* StatsViewController.swift in Sources */,
+				4270B4F523568DED0043B650 /* NavigationViewAnimations.swift in Sources */,
+				4270B4ED235669040043B650 /* TimerViewController.swift in Sources */,
+				4270B4F3235674810043B650 /* ResourcesViewController.swift in Sources */,
 				4270B4B9235660040043B650 /* SceneDelegate.swift in Sources */,
+				4270B4F1235674760043B650 /* CandlesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

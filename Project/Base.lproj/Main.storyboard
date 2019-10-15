@@ -31,7 +31,7 @@
                                     <segue destination="ekd-gb-MJi" kind="embed" id="y4w-of-lNs"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3l-Lm-0Da" userLabel="Navigation View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3l-Lm-0Da" userLabel="Navigation View" customClass="NavigationView" customModule="Project" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gr-4c-DsC" userLabel="Candle Button View">
@@ -41,6 +41,9 @@
                                             <constraint firstAttribute="width" constant="80" id="RTj-zs-m3H"/>
                                             <constraint firstAttribute="width" secondItem="2gr-4c-DsC" secondAttribute="height" multiplier="2:3" id="T61-HK-Ri4"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="XwT-eD-osP" appends="YES" id="jar-jt-R1T"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W77-Ee-Yha" userLabel="Resources Icon View">
                                         <rect key="frame" x="348.5" y="784" width="44" height="44"/>
@@ -48,6 +51,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="W77-Ee-Yha" secondAttribute="height" multiplier="1:1" id="16Z-K2-YKI"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="aaf-h2-boy" appends="YES" id="GW8-hm-0wo"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIl-8q-fkV" userLabel="Indicator">
                                         <rect key="frame" x="184" y="848" width="46" height="4"/>
@@ -64,6 +70,9 @@
                                             <constraint firstAttribute="width" secondItem="49P-Fs-ubT" secondAttribute="height" multiplier="1:1" id="3Kn-sv-99I"/>
                                             <constraint firstAttribute="width" constant="44" id="8wx-dx-VdG"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="WBF-Ad-uNo" appends="YES" id="yYI-wM-L54"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,6 +87,19 @@
                                     <constraint firstItem="49P-Fs-ubT" firstAttribute="width" secondItem="W77-Ee-Yha" secondAttribute="width" id="stQ-a6-vQe"/>
                                     <constraint firstAttribute="bottom" secondItem="2gr-4c-DsC" secondAttribute="bottom" constant="72" id="xL6-ub-iKk"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="candleButtonBottomConstraint" destination="xL6-ub-iKk" id="qtg-WN-c7r"/>
+                                    <outlet property="candleButtonView" destination="2gr-4c-DsC" id="g1F-wC-ujD"/>
+                                    <outlet property="candleButtonWidthConstraint" destination="RTj-zs-m3H" id="wmZ-k5-flk"/>
+                                    <outlet property="colourView" destination="bEm-sv-Ic7" id="whr-P3-eNp"/>
+                                    <outlet property="indicator" destination="TIl-8q-fkV" id="sEU-6j-NpK"/>
+                                    <outlet property="resourcesHorizontalConstraint" destination="D8M-CF-kA8" id="5lC-8Q-esr"/>
+                                    <outlet property="resourcesIconView" destination="W77-Ee-Yha" id="LJo-dA-eyQ"/>
+                                    <outlet property="statsIconBottomConstraint" destination="cuO-8n-uOC" id="2H8-HI-jIt"/>
+                                    <outlet property="statsIconHorizontalConstraint" destination="c8R-l6-AGR" id="ygG-m1-mwl"/>
+                                    <outlet property="statsIconView" destination="49P-Fs-ubT" id="2cQ-rB-Imw"/>
+                                    <outlet property="statsIconWidthConstraint" destination="8wx-dx-VdG" id="8CZ-yD-eI8"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -106,36 +128,98 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XwT-eD-osP">
+                    <connections>
+                        <action selector="handleCandleButton:" destination="BYZ-38-t0r" id="M8r-ly-5E4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WBF-Ad-uNo">
+                    <connections>
+                        <action selector="handleStatsIconTap:" destination="BYZ-38-t0r" id="0n6-kf-5Uy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="aaf-h2-boy">
+                    <connections>
+                        <action selector="handleResourcesIconTap:" destination="BYZ-38-t0r" id="2KL-IC-vYV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Timer View Controller-->
         <scene sceneID="6SE-06-tzY">
             <objects>
-                <viewController id="kdq-3I-qPN" sceneMemberID="viewController">
+                <viewController id="kdq-3I-qPN" customClass="TimerViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5x6-te-Tit">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="p8a-Ia-v5j"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5B-w5-Uv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629" y="852"/>
+            <point key="canvasLocation" x="533" y="861"/>
         </scene>
-        <!--View Controller-->
+        <!--Stats View Controller-->
+        <scene sceneID="TlJ-sX-zb4">
+            <objects>
+                <viewController storyboardIdentifier="StatsViewController" id="FGz-we-oe7" customClass="StatsViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O7a-Oy-TOM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ees-9n-wde"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vkF-EK-at8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="1584"/>
+        </scene>
+        <!--Candles View Controller-->
+        <scene sceneID="rJ6-9L-2oO">
+            <objects>
+                <viewController storyboardIdentifier="CandlesViewController" id="hQ5-Mf-1ox" customClass="CandlesViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ahi-7s-DaL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Xpb-si-Jwo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kap-dX-WKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="1584"/>
+        </scene>
+        <!--Resources View Controller-->
+        <scene sceneID="Diz-sJ-sgs">
+            <objects>
+                <viewController storyboardIdentifier="ResourcesViewController" id="vxo-Io-gM5" customClass="ResourcesViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mqM-Fn-v2g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mlV-jS-UYu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2p-A8-MA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="1584"/>
+        </scene>
+        <!--Scroll View Controller-->
         <scene sceneID="JBL-ce-pso">
             <objects>
-                <viewController id="ekd-gb-MJi" sceneMemberID="viewController">
+                <viewController id="ekd-gb-MJi" customClass="ScrollViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqD-lA-21b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZTR-WJ-AuN"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCm-ez-eYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262" y="852"/>
+            <point key="canvasLocation" x="-225" y="860"/>
         </scene>
     </scenes>
 </document>
