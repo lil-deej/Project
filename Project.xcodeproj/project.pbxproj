@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		4270B4B7235660040043B650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4B6235660040043B650 /* AppDelegate.swift */; };
 		4270B4B9235660040043B650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4B8235660040043B650 /* SceneDelegate.swift */; };
-		4270B4BB235660040043B650 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4BA235660040043B650 /* ViewController.swift */; };
 		4270B4BE235660040043B650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4270B4BC235660040043B650 /* Main.storyboard */; };
 		4270B4C0235660050043B650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4270B4BF235660050043B650 /* Assets.xcassets */; };
 		4270B4C3235660050043B650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4270B4C1235660050043B650 /* LaunchScreen.storyboard */; };
 		4270B4CE235660050043B650 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4CD235660050043B650 /* ProjectTests.swift */; };
 		4270B4D9235660050043B650 /* ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4D8235660050043B650 /* ProjectUITests.swift */; };
+		4270B4E72356607C0043B650 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4E62356607C0043B650 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		4270B4B3235660040043B650 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4270B4B6235660040043B650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4270B4B8235660040043B650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4270B4BA235660040043B650 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4270B4BD235660040043B650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4270B4BF235660050043B650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4270B4C2235660050043B650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		4270B4D4235660050043B650 /* ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4270B4D8235660050043B650 /* ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUITests.swift; sourceTree = "<group>"; };
 		4270B4DA235660050043B650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4270B4E62356607C0043B650 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			children = (
 				4270B4B6235660040043B650 /* AppDelegate.swift */,
 				4270B4B8235660040043B650 /* SceneDelegate.swift */,
-				4270B4BA235660040043B650 /* ViewController.swift */,
+				4270B4E62356607C0043B650 /* MainViewController.swift */,
 				4270B4BC235660040043B650 /* Main.storyboard */,
 				4270B4BF235660050043B650 /* Assets.xcassets */,
 				4270B4C1235660050043B650 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4270B4BB235660040043B650 /* ViewController.swift in Sources */,
+				4270B4E72356607C0043B650 /* MainViewController.swift in Sources */,
 				4270B4B7235660040043B650 /* AppDelegate.swift in Sources */,
 				4270B4B9235660040043B650 /* SceneDelegate.swift in Sources */,
 			);
