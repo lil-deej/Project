@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
     return self.storyboard?.instantiateViewController(withIdentifier: "ResourcesViewController")
   }()
   
-  @IBOutlet var navigationView: UIView!
+  @IBOutlet var navigationView: NavigationView!
   
   override var prefersStatusBarHidden: Bool {
     return true
@@ -87,7 +87,7 @@ extension MainViewController: ScrollViewControllerDelegate {
       controller = resourcesViewController
     }
     
-    // navigationView.animate(to: controller, percent: result)
+    navigationView.animate(to: controller, percent: result)
   }
   
 }

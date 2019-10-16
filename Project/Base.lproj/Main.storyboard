@@ -93,7 +93,7 @@
                                     <outlet property="candleButtonWidthConstraint" destination="RTj-zs-m3H" id="wmZ-k5-flk"/>
                                     <outlet property="colourView" destination="bEm-sv-Ic7" id="whr-P3-eNp"/>
                                     <outlet property="indicator" destination="TIl-8q-fkV" id="sEU-6j-NpK"/>
-                                    <outlet property="resourcesHorizontalConstraint" destination="D8M-CF-kA8" id="5lC-8Q-esr"/>
+                                    <outlet property="resourcesIconHorizontalConstraint" destination="D8M-CF-kA8" id="5lC-8Q-esr"/>
                                     <outlet property="resourcesIconView" destination="W77-Ee-Yha" id="LJo-dA-eyQ"/>
                                     <outlet property="statsIconBottomConstraint" destination="cuO-8n-uOC" id="2H8-HI-jIt"/>
                                     <outlet property="statsIconHorizontalConstraint" destination="c8R-l6-AGR" id="ygG-m1-mwl"/>

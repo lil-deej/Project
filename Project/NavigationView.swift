@@ -31,7 +31,7 @@ class NavigationView: UIView {
   }()
   
   lazy var resourcesIconHorizontalConstraintConstant: CGFloat = {
-    return self.resourcesHorizontalConstraint.constant
+    return self.resourcesIconHorizontalConstraint.constant
   }()
   
   lazy var indicatorTransform: CGAffineTransform = {
@@ -48,7 +48,7 @@ class NavigationView: UIView {
   @IBOutlet var statsIconHorizontalConstraint: NSLayoutConstraint!
   
   @IBOutlet var resourcesIconView: UIView!
-  @IBOutlet var resourcesHorizontalConstraint: NSLayoutConstraint!
+  @IBOutlet var resourcesIconHorizontalConstraint: NSLayoutConstraint!
   
   @IBOutlet var indicator: UIView!
   
@@ -88,6 +88,28 @@ class NavigationView: UIView {
     return view == self ? nil : view
   }
   
-  
+  func animate(to controller: UIViewController?, percent: CGFloat) {
+    let offset = abs(percent)
+    
+    // candleButtonWhiteView.alpha = 1 - offset
+    // candleButtonGreyView.alpha = offset
+    
+    // animateIconColour(offset: offset)
+    animateIconPosition(offset: offset)
+    animateIconScale(offset: offset)
+    animateIconCentre(offset: offset)
+    
+    animateBottomBar(percent: percent)
+    
+    if let controller = controller as? ColourView {
+      colourView.backgroundColor = controller.controllerColour
+    }
+    
+    var colourOffset = (offset - 0.2) / (0.8 - 0.2)
+    colourOffset = min(max(colourOffset, 0), 1)
+    colourView.alpha = offset
+    
+    layoutIfNeeded()
+  }
   
 }
