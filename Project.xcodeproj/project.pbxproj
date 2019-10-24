@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420E05E823620B8300C8172E /* CandlesFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420E05E723620B8300C8172E /* CandlesFlowLayout.swift */; };
+		420E05EA23620BC400C8172E /* CandleRectangleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420E05E923620BC400C8172E /* CandleRectangleCell.swift */; };
 		4270B4B7235660040043B650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4B6235660040043B650 /* AppDelegate.swift */; };
 		4270B4B9235660040043B650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270B4B8235660040043B650 /* SceneDelegate.swift */; };
 		4270B4BE235660040043B650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4270B4BC235660040043B650 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		420E05E723620B8300C8172E /* CandlesFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlesFlowLayout.swift; sourceTree = "<group>"; };
+		420E05E923620BC400C8172E /* CandleRectangleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleRectangleCell.swift; sourceTree = "<group>"; };
 		4270B4B3235660040043B650 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4270B4B6235660040043B650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4270B4B8235660040043B650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				4270B4E82356667C0043B650 /* NavigationView.swift */,
 				4270B4F423568DED0043B650 /* NavigationViewAnimations.swift */,
 				4270B4BC235660040043B650 /* Main.storyboard */,
+				420E05E723620B8300C8172E /* CandlesFlowLayout.swift */,
+				420E05E923620BC400C8172E /* CandleRectangleCell.swift */,
 				4270B4BF235660050043B650 /* Assets.xcassets */,
 				4270B4C1235660050043B650 /* LaunchScreen.storyboard */,
 				4270B4C4235660050043B650 /* Info.plist */,
@@ -280,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420E05EA23620BC400C8172E /* CandleRectangleCell.swift in Sources */,
 				4270B4E72356607C0043B650 /* MainViewController.swift in Sources */,
 				4270B4B7235660040043B650 /* AppDelegate.swift in Sources */,
 				4270B4EB235667160043B650 /* ScrollViewController.swift in Sources */,
@@ -289,6 +296,7 @@
 				4270B4ED235669040043B650 /* TimerViewController.swift in Sources */,
 				4270B4F3235674810043B650 /* ResourcesViewController.swift in Sources */,
 				4270B4B9235660040043B650 /* SceneDelegate.swift in Sources */,
+				420E05E823620B8300C8172E /* CandlesFlowLayout.swift in Sources */,
 				4270B4F1235674760043B650 /* CandlesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
