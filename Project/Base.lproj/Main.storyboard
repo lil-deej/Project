@@ -35,7 +35,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3l-Lm-0Da" userLabel="Navigation View" customClass="NavigationView" customModule="Project" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gr-4c-DsC" userLabel="Candle Button View">
+                                    <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gr-4c-DsC" userLabel="Candle Button View">
                                         <rect key="frame" x="167" y="670" width="80" height="120"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -186,11 +186,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTz-Mi-moq" userLabel="Layout View">
-                                <rect key="frame" x="0.0" y="124" width="414" height="538"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="546"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96n-pB-5iS" userLabel="Candle View">
-                                <rect key="frame" x="132" y="280.5" width="150" height="225"/>
+                                <rect key="frame" x="132" y="284.5" width="150" height="225"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="6GX-gO-Eht"/>
@@ -198,7 +198,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8zH-iQ-RkB">
-                                <rect key="frame" x="0.0" y="662" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="670" width="414" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="sdz-yO-CII"/>
@@ -224,7 +224,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eTz-Mi-moq" firstAttribute="top" secondItem="Xpb-si-Jwo" secondAttribute="top" constant="80" id="FgZ-z6-E23"/>
-                            <constraint firstItem="Xpb-si-Jwo" firstAttribute="bottom" secondItem="8zH-iQ-RkB" secondAttribute="bottom" constant="80" id="G7y-7C-8bk"/>
+                            <constraint firstItem="Xpb-si-Jwo" firstAttribute="bottom" secondItem="8zH-iQ-RkB" secondAttribute="bottom" constant="72" id="G7y-7C-8bk"/>
                             <constraint firstItem="96n-pB-5iS" firstAttribute="centerX" secondItem="ahi-7s-DaL" secondAttribute="centerX" id="I2u-Iq-gjT"/>
                             <constraint firstItem="eTz-Mi-moq" firstAttribute="centerY" secondItem="96n-pB-5iS" secondAttribute="centerY" id="SYW-ff-y0E"/>
                             <constraint firstItem="eTz-Mi-moq" firstAttribute="centerX" secondItem="Xpb-si-Jwo" secondAttribute="centerX" id="WnD-w0-8ZZ"/>

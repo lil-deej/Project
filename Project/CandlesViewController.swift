@@ -69,28 +69,28 @@ extension CandlesViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension CandlesViewController: UIScrollViewDelegate {
-  
+
   func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
     let bounds = candleCollectionView.bounds
-    
+
     let xPosition = bounds.origin.x + bounds.size.width / 2
     let yPosition = bounds.size.height / 2
-    
+
     let xyPoint = CGPoint(x: xPosition, y: yPosition)
-    
+
     guard let indexPath = candleCollectionView.indexPathForItem(at: xyPoint) else { return }
-    
+
     selectCell(for: indexPath, animated: true)
   }
-  
+
   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
     if !decelerate {
       scrollViewDidEndDecelerating(scrollView)
     }
   }
-  
+
   func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
     scrollViewDidEndDecelerating(scrollView)
   }
-  
+
 }

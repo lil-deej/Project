@@ -8,7 +8,7 @@
 
 import UIKit
 
-let defaultItemScale: CGFloat = 0.7
+let defaultItemScale: CGFloat = 0.5
 
 class CandlesFlowLayout: UICollectionViewFlowLayout {
   
