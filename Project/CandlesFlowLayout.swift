@@ -12,8 +12,15 @@ let defaultItemScale: CGFloat = 0.5
 
 class CandlesFlowLayout: UICollectionViewFlowLayout {
   
+  var isSetup = false
+  
   override func prepare() {
     super.prepare()
+    
+    if !isSetup {
+      setupCollectionView()
+      isSetup = true
+    }
     
     scrollDirection = .horizontal
     minimumLineSpacing = 0
@@ -34,7 +41,7 @@ class CandlesFlowLayout: UICollectionViewFlowLayout {
   override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
     return true
   }
-
+  
   private func changeLayoutAttributes(_ attributes: UICollectionViewLayoutAttributes) {
     
     let collectionCentre = collectionView!.frame.size.width / 2
@@ -49,6 +56,13 @@ class CandlesFlowLayout: UICollectionViewFlowLayout {
     let scale = defaultItemScale + ratio * (1 - defaultItemScale)
     
     attributes.transform3D = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
+  }
+  
+  func setupCollectionView() {
+    guard let collectionView = collectionView else { return }
+    let collectionSize = collectionView.bounds.size
+    let xInset = (collectionSize.width - itemSize.width) / 2
+    sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset)
   }
   
 }
