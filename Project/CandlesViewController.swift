@@ -24,6 +24,7 @@ class CandlesViewController: UIViewController {
     candleCollectionView.dataSource = self
     candleCollectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     candleCollectionView.register(CandleRectangleCell.self, forCellWithReuseIdentifier: CandleRectangleCell.identifier)
+    candleCollectionView.showsHorizontalScrollIndicator = false
     
     let layout = candleCollectionView.collectionViewLayout as! CandlesFlowLayout
     let standardItemSize = layout.itemSize.width * defaultItemScale

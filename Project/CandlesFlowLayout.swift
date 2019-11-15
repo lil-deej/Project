@@ -62,7 +62,7 @@ class CandlesFlowLayout: UICollectionViewFlowLayout {
     guard let collectionView = collectionView else { return }
     let collectionSize = collectionView.bounds.size
     let xInset = (collectionSize.width - itemSize.width) / 2
-    sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset)
+    sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset / 10)
   }
   
 }
