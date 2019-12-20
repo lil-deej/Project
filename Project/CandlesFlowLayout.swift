@@ -8,7 +8,7 @@
 
 import UIKit
 
-let defaultItemScale: CGFloat = 0.5
+let defaultItemScale: CGFloat = 0.6
 
 class CandlesFlowLayout: UICollectionViewFlowLayout {
   
@@ -62,7 +62,7 @@ class CandlesFlowLayout: UICollectionViewFlowLayout {
     guard let collectionView = collectionView else { return }
     let collectionSize = collectionView.bounds.size
     let xInset = (collectionSize.width - itemSize.width) / 2
-    sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset / 10)
+    sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset)
   }
   
 }

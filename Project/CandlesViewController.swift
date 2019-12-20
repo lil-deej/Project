@@ -26,9 +26,6 @@ class CandlesViewController: UIViewController {
     candleCollectionView.register(CandleRectangleCell.self, forCellWithReuseIdentifier: CandleRectangleCell.identifier)
     candleCollectionView.showsHorizontalScrollIndicator = false
     
-    let layout = candleCollectionView.collectionViewLayout as! CandlesFlowLayout
-    let standardItemSize = layout.itemSize.width * defaultItemScale
-    layout.estimatedItemSize = CGSize(width: standardItemSize, height: standardItemSize * 1.5)
   }
   
   override func viewDidLayoutSubviews() {
