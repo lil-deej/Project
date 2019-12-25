@@ -65,4 +65,29 @@ class CandlesFlowLayout: UICollectionViewFlowLayout {
     sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset)
   }
   
+  func closestIndexpath(forOffset offset: CGPoint) -> IndexPath {
+    guard let cv = collectionView else { return IndexPath(item: 0, section: 0) }
+    
+    let items = layoutAttributesForElements(in: CGRect(origin: offset, size: cv.frame.size)) ?? []
+    let distancesToCentre = items.map {
+      abs($0.frame.midX.distance(to: cv.frame.width * 0.5 + offset.x))
+    }
+    
+    let minimum = zip(items, distancesToCentre).min { first, second in
+      first.1 < second.1
+    }
+    guard let targetAttribute = minimum else { return IndexPath(item: 0, section: 0) }
+    return targetAttribute.0.indexPath
+  }
+  
+  func middleOffset(forIndexPath indexPath: IndexPath) -> CGPoint {
+    guard let attribute = layoutAttributesForItem(at: indexPath), let cv = collectionView else { return .zero }
+    let x = attribute.frame.minX + (attribute.frame.width - cv.frame.width) * 0.5
+    return CGPoint(x: x, y: 0)
+  }
+  
+  override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+    let middleIndexPath = closestIndexpath(forOffset: proposedContentOffset)
+    return middleOffset(forIndexPath: middleIndexPath)
+  }
 }
